@@ -18,8 +18,8 @@ spec:
         imagePullPolicy: Always
         resources:
           limits:
-            memory: "128Mi"
-            cpu: "500m"
+            memory: "50Mi"
+            cpu: "25m"
         ports:
         - containerPort: 4000
 
@@ -63,7 +63,7 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: backend
-  minReplicas: 2
+  minReplicas: 1
   maxReplicas: 10
   metrics:
   - type: Resource
